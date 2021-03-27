@@ -49,6 +49,8 @@ public class StateMachine {
         
         // needs to happen after init of properties
         self.rebufferingTimeoutHandler.initialise(stateMachine: self)
+        print("Initialized Rebuffering Timeout Handler: ")
+
     }
 
     deinit {
