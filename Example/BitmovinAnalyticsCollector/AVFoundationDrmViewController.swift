@@ -72,7 +72,7 @@ class AVFoundationDrmViewController: UIViewController {
         playerView.player = player
         addObserver(self, forKeyPath: #keyPath(AVFoundationDrmViewController.player.rate), options: [.new, .initial], context: &AVFoundationDrmViewController.playerViewControllerKVOContext)
         createPlayer()
-        analyticsCollector.attachPlayer(player: player)
+        analyticsCollector.attachAVPlayer(player: player)
     }
 
     func createPlayer() {
@@ -130,7 +130,7 @@ class AVFoundationDrmViewController: UIViewController {
         config.title = "ios static with AVFoundation"
         config.path = "/vod/breadcrumb/2/"
         config.isLive = true
-        analyticsCollector.attachPlayer(player: player)
+        analyticsCollector.attachAVPlayer(player: player)
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
