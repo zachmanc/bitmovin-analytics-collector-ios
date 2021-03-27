@@ -24,15 +24,15 @@ public class BitmovinAnalyticsInternal: NSObject {
         stateMachine = StateMachine(config: self.config)
         eventDataDispatcher = SimpleEventDataDispatcher(config: config)
         super.init()
-        NotificationCenter.default.addObserver(self, selector: #selector(licenseFailed(notification:)), name: .licenseFailed, object: eventDataDispatcher)
-        NotificationCenter.default.addObserver(self,
-            selector: #selector(applicationWillTerminate(notification:)),
-            name: UIApplication.willTerminateNotification,
-            object: nil)
-        
-        if (config.ads) {
-            self.adAnalytics = BitmovinAdAnalytics(analytics: self);
-        }
+//        NotificationCenter.default.addObserver(self, selector: #selector(licenseFailed(notification:)), name: .licenseFailed, object: eventDataDispatcher)
+//        NotificationCenter.default.addObserver(self,
+//            selector: #selector(applicationWillTerminate(notification:)),
+//            name: UIApplication.willTerminateNotification,
+//            object: nil)
+//        
+//        if (config.ads) {
+//            self.adAnalytics = BitmovinAdAnalytics(analytics: self);
+//        }
     }
     
     deinit {
