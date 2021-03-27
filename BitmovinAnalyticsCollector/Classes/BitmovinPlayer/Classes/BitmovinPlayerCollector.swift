@@ -12,12 +12,12 @@ public class BitmovinPlayerCollector : BitmovinAnalyticsInternal {
      */
     @objc public func attachPlayer(player: Player) {
         print("BitmovinPlayerCollector::attachPlayer() inside")
-        print("BitmovinPlayerCollector::attachPlayer() type = %@", type(of: player))
-        let autoplay = player.config.playbackConfiguration.isAutoplayEnabled && player.config.sourceItem != nil
-        attach(adapter: BitmovinPlayerAdapter(player: player, config: config, stateMachine: stateMachine), autoplay: autoplay)
-        if (self.adAnalytics != nil) {
-            attachAd(adAdapter: BitmovinAdAdapter(bitmovinPlayer: player, adAnalytics: self.adAnalytics!))
-        }
+//        print("BitmovinPlayerCollector::attachPlayer() type = %@", type(of: player))
+//        let autoplay = player.config.playbackConfiguration.isAutoplayEnabled && player.config.sourceItem != nil
+//        attach(adapter: BitmovinPlayerAdapter(player: player, config: config, stateMachine: stateMachine), autoplay: autoplay)
+//        if (self.adAnalytics != nil) {
+//            attachAd(adAdapter: BitmovinAdAdapter(bitmovinPlayer: player, adAnalytics: self.adAnalytics!))
+//        }
     }
 
 }
