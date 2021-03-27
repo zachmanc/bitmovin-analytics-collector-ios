@@ -11,6 +11,7 @@ public class BitmovinPlayerCollector : BitmovinAnalyticsInternal {
      * will start monitoring and sending analytics data based on the attached player instance.
      */
     @objc public func attachPlayer(player: Player) {
+        print("BitmovinPlayerCollector::attachPlayer() %@", type(of: player))
         let autoplay = getIsAutoplayEnabled(player.config)
         attach(adapter: BitmovinPlayerAdapter(player: player, config: config, stateMachine: stateMachine), autoplay: autoplay)
         if (self.adAnalytics != nil) {
@@ -19,6 +20,7 @@ public class BitmovinPlayerCollector : BitmovinAnalyticsInternal {
     }
     
     func getIsAutoplayEnabled(_ playerConfiguration: PlayerConfiguration) -> Bool {
-        return playerConfiguration.playbackConfiguration.isAutoplayEnabled && playerConfiguration.sourceConfiguration.firstSourceItem != nil
+        print("BitmovinPlayerCollector::getIsAutoplayEnabled() %@", type(of: playerConfiguration))
+        return playerConfiguration.playbackConfiguration.isAutoplayEnabled && playerConfiguration.sourceItem != nil
     }
 }

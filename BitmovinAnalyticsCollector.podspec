@@ -13,8 +13,8 @@ DESC
   s.author           = { 'Bitmovin Inc' => 'admin@bitmovin.com' }
   s.source           = { :git => 'https://github.com/bitmovin/bitmovin-analytics-collector-ios.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
-  s.tvos.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
+  s.tvos.deployment_target = '11.0'
   s.swift_version = '5.0'
 
   s.pod_target_xcconfig = {
@@ -32,8 +32,8 @@ DESC
 
   s.subspec 'BitmovinPlayer' do |bitmovinplayer|
     bitmovinplayer.source_files = 'BitmovinAnalyticsCollector/Classes/BitmovinPlayer/**/*.{swift}'    
-    bitmovinplayer.tvos.dependency 'BitmovinPlayer', '~>2.51'
-    bitmovinplayer.ios.dependency 'BitmovinPlayer', '~>2.51'
+    bitmovinplayer.tvos.dependency 'BitmovinPlayer', '2.61.1'
+    bitmovinplayer.ios.dependency 'BitmovinPlayer', '2.61.1'
     
     s.test_spec 'BitmovinPlayerTests' do |bitmovinplayer_test_spec|
       bitmovinplayer_test_spec.source_files = 'Tests/BitmovinPlayerTests/**/*'
