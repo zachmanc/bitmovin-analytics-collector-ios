@@ -34,7 +34,7 @@ public class StateMachine {
     
     // features objects
     public var qualityChangeCounter: QualityChangeCounter
-    public var rebufferingTimeoutHandler: RebufferingTimeoutHandler
+//    public var rebufferingTimeoutHandler: RebufferingTimeoutHandler
     
     // error tracking
     private var errorData: ErrorData? = nil

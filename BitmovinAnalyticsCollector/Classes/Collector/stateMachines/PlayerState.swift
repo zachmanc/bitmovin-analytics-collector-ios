@@ -28,7 +28,7 @@ public enum PlayerState: String {
                 stateMachine.startVideoStartFailedTimer()
                 return
             case .buffering:
-                stateMachine.rebufferingTimeoutHandler.startInterval()
+//                stateMachine.rebufferingTimeoutHandler.startInterval()
                 stateMachine.scheduleRebufferHeartbeat()
                 return
             case .playAttemptFailed:
@@ -78,7 +78,7 @@ public enum PlayerState: String {
                     stateMachine.delegate?.stateMachine(stateMachine, didStartupWithDuration: stateMachine.startupTime)
                 }
             case .buffering:
-                stateMachine.rebufferingTimeoutHandler.resetInterval()
+//                stateMachine.rebufferingTimeoutHandler.resetInterval()
                 stateMachine.disableRebufferHeartbeat()
                 stateMachine.delegate?.stateMachine(stateMachine, didExitBufferingWithDuration: duration)
                 return
